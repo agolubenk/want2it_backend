@@ -159,21 +159,24 @@ JAZZMIN_SETTINGS = {
     "site_title": "want2it.online",
     "site_header": "Admin Page",
     "site_brand": "Want2IT",
-    "site_icon": "assets/images/favicon.svg",
+    "site_icon": "images/logo/big-logo.png",
     # Add your own branding here
     "site_logo": None,
     "welcome_sign": "Приветствую администратор Want2IT",
     # Copyright on the footer
     "copyright": "Хочу в IT",
-    "user_avatar": None,
+    "user_avatar": 'images/favicon.svg',
     ############
     # Top Menu #
     ############
     # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "your_site_name", "url": "home", "permissions": ["auth.view_user"]},
+        {"name": "Хочу в IT", "url": "want2it.online", "permissions": ["auth.view_user"]},
         # model admin to link to (Permissions checked against model)
+        {"model": "vacancy.Vacancy"},
+        {"model": "blog.Blog"},
+        {"model": "contacts.Contacts"},
         {"model": "auth.User"},
     ],
     #############
@@ -194,7 +197,7 @@ JAZZMIN_SETTINGS = {
     },
     # # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
-    "default_icon_children": "fas fa-arrow-circle-right",
+    "default_icon_children": "fas fa-arrow-right",
     #################
     # Related Modal #
     #################
@@ -226,8 +229,8 @@ JAZZMIN_UI_TWEAKS = {
     "footer_small_text": False,
     "body_small_text": False,
     "brand_small_text": False,
-    "brand_colour": "navbar-success",
-    "accent": "accent-teal",
+    "brand_colour": "navbar-primary",
+    "accent": "accent-primary",
     "navbar": "navbar-dark",
     "no_navbar_border": False,
     "navbar_fixed": False,
@@ -235,14 +238,14 @@ JAZZMIN_UI_TWEAKS = {
     "footer_fixed": False,
     "sidebar_fixed": False,
     "sidebar": "sidebar-dark-info",
-    "sidebar_nav_small_text": False,
+    "sidebar_nav_small_text": True,
     "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": False,
-    "sidebar_nav_compact_style": False,
+    "sidebar_nav_child_indent": True,
+    "sidebar_nav_compact_style": True,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "cyborg",
-    "dark_mode_theme": None,
+    "theme": "darkly",
+    "dark_mode_theme": "slate",
     "button_classes": {
         "primary": "btn-primary",
         "secondary": "btn-secondary",
