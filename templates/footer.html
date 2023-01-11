@@ -1,0 +1,102 @@
+{% load static %}        <!-- Start Footer Area -->
+          <!-- Start Footer Area -->
+    <footer class="footer">
+        <!-- Start Middle Top -->
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-sm-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>Компаниям</h3>
+                            <ul>
+                                <li><a href="price.html">Цены</a></li>
+                                <li><a href="why.html">Почему мы</a></li>
+                                <li><a href="docs.html">Документы</a></li>
+                                <li><a href="access/">Кабинет HR</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>Соискателям</h3>
+                            <ul>
+                                <li><a href="vacancy.html">Вакансии</a></li>
+                                <li><a href="upload.html">Составление резюме</a></li>
+                                <li><a href="invate.html">Документы</a></li>
+                                <li><a href="feedback.html">Личный кабинет</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link">
+                            <h3>О нас</h3>
+                            <ul>
+                                <li><a href="about.html">О компании</a></li>
+                                <li><a href="about.html#contacts">Контакты</a></li>
+                                <li><a href="join.html">Работа у нас</a></li>
+                                <li><a href="promo/">Помощь</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12">
+                        <!-- Single Widget -->
+                        <div class="single-footer f-link text-truncate">
+                            <h3>Блог</h3>
+                            <ul>
+                                <li><a href="blog.html">Все статьи</a></li>
+                                            {% for menupost in menuposts %}
+                                            <li><a href="blog.html?postid=7" class="text-truncate" style="margin-top: -2px; margin-bottom: -1px;">{{ menupost.title }}</a></li>
+                                            {% endfor %}
+                            </ul>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <!-- Single Widget -->
+                        <div class="f-about single-footer text-center">
+                            <div class="logo">
+                                <a href="index.html" class="text-center"><img src="{% static 'images/logo/big-logo.png' %}" alt="Logo" style="width: 56%"></a>
+                            </div>
+                            <span class="text-center"><big>Рекрутинговое агентство <strong>"Хочу в IT"</strong> </big></span>
+                            <div class="footer-social">
+                                        <div class="button w-100">
+            <a class="btn w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+        </div>
+                            </div>
+                        </div>
+                        <!-- End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Middle -->
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="d-flex flex-column flex-md-row justify-content-between mx-auto py-2 mt-2 border-top border-secondary">
+<ul class="d-flex justify-content-center order-md-last social-icons my-auto mx-5" style="margin-top: -12px">
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><a class="twitter" href="https://twitter.com/want2it"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"><a class="telegram" href="https://t.me/want2it"><i class="fa fa-telegram fa-lg"></i></a></li>
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin"><a class="linkedin" href="https://linkedin.com/company/want2it/"><i class="fa fa-linkedin fa-lg"></i></a></li>
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><a class="facebook" href="https://facebook.com/want2it.online/"><i class="fa fa-facebook fa-lg"></i></a></li>
+              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><a class="instagram" href="https://instagram.com/want2it/"><i class="fa fa-instagram fa-lg"></i></a></li>
+            </ul>
+      <p class="my-auto mx-5 text-center">&copy; 2022 <span class="lang-49" data-label="LLC 'Want 2 IT'">ООО "Хочу Вайти"</span> <small style="opacity: 0.5">УНП192847179</small></p>
+
+      </div>
+        </div>
+        <!-- End Footer Middle -->
+    </footer>
+    <!--/ End Footer Area -->
+
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top btn-hover">
+        <i class="lni lni-chevron-up"></i>
+    </a>

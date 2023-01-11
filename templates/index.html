@@ -1,0 +1,436 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+    <!-- Start Hero Area -->
+    <section class="hero-area">
+        <!-- Single Slider -->
+        <div class="hero-inner">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-6 co-12">
+                        <div class="home-slider">
+                            <div class="hero-text">
+                                <h1 class="wow fadeInUp" data-wow-delay=".3" style="font-size: 56px;">Хочу в IT</h1>
+                                <p class="wow fadeInUp" data-wow-delay=".5s" style="font-size: 21px;">Рекрутинговое агентство по профессиональному <br> подбору IT-специалистов любого грейда и любой сложности.<br>  Мы соберем Вашу команду мечты!</p>
+                                <div class="button wow fadeInUp" data-wow-delay=".7s">
+                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn">Оставить заявку</a>
+                                </div>
+                                <div class="button wow fadeInUp" data-wow-delay=".9s">
+                                    <a href="vacancy.html" class="btn">Посмотреть открытые вакансии</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Single Slider -->
+    </section>
+    <!--/ End Hero Area -->
+
+    <!-- Start Service Area -->
+    <section class="services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title align-left">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Почему мы?</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".4s">Работаем с применением различных техник в части поиска и подбора персонала, используем как классические инструменты, так и современные методики для оценки и поиска сотрудников.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="single-head">
+                <img class="service-patern wow fadeInLeft" data-wow-delay=".5s"
+                    src="assets/images/service/service-patern.png" alt="#">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-service wow fadeInUp" data-wow-delay=".2s">
+                            <h3><a href="#">Качество</a></h3>
+                            <div class="icon">
+                                <i class="bi bi-trophy-fill fa-lg"></i>
+                            </div>
+                            <p>Мы знаем где искать опытных и квалифицированных сотрудников, которые в состоянии решить Ваши задачи.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-service wow fadeInUp" data-wow-delay=".4s">
+                            <h3><a href="service-single.html">Скорость</a></h3>
+                            <div class="icon">
+                                <i class="bi bi-speedometer fa-lg"></i>
+                            </div>
+                            <p>Помимо качественного подбора мы еще и максимально быстрые! Для нас приоритетна каждая вакансия партнера.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-service wow fadeInUp" data-wow-delay=".6s">
+                            <h3><a href="service-single.html">Результативность</a></h3>
+                            <div class="icon">
+                                <i class="bi bi-briefcase-fill fa-lg"></i>
+                            </div>
+                            <p>Мы ведем поиск специалистов разного уровня сложности, опираясь на наши опыт и профессионализм.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="single-service wow fadeInUp" data-wow-delay=".8s">
+                            <h3><a href="service-single.html">Гибкий подход</a></h3>
+                            <div class="icon">
+                                <i class="bi bi-bug-fill fa-lg"></i>
+                            </div>
+                            <p>Мы учитываем как профессиональные навыки, так и личностные качества сотрудника и микроклимат в компании.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Services Area -->
+
+    <!-- Start About Us Area -->
+    <section class="about-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="about-left">
+                        <div class="section-title align-left">
+                            <h2 class="wow fadeInUp" data-wow-delay=".2s">Как мы работаем?</h2>
+                            <p class="wow fadeInUp" data-wow-delay=".5s">Мы оперативно ищем кандидатов для Вас. И вот как мы это делаем:</p>
+                        </div>
+                        <div class="about-tab wow fadeInUp" data-wow-delay=".4s">
+                            <!-- Nav Tab  -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#t-tab1"
+                                        role="tab">Заявка</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab2"
+                                        role="tab">Поиск</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab3"
+                                        role="tab">Интервью</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab4"
+                                        role="tab">Кандидат</a></li>
+                            </ul>
+                            <!--/ End Nav Tab -->
+                            <div class="tab-content" id="myTabContent">
+                                <!-- Tab 1 -->
+                                <div class="tab-pane fade show active" id="t-tab1" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>Вы озвучиваете, кто Вам нужен и что он/она должны уметь делать, с каким стеком работать и какой бэкграунд необходим.</p>
+                                        <ul>
+                                            <li><i class="lni lni-checkmark-circle"></i> Подписываем договор</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Определяемся с тарифом</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Составляем ТЗ по вакансии</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Знакомимся с лидами</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/ End Tab 1 -->
+                                <!-- Tab 2 -->
+                                <div class="tab-pane fade" id="t-tab2" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>Мы выкладываем вакансию на множестве площадок, актуализируем свою базу и приступаем к поиску кандидатов. Мы используем множество каналов и разные методы, чтобы сделать все бысто.</p>
+                                        <p>Уже через несколько дней мы предоставляем Вам первых кандидатов и начинаем проводить интервью. Когда нужный кандидат найден, мы отправляем его к Вам на итоговое согласование.</p>
+
+                                    </div>
+                                </div>
+                                <!--/ End Tab 2 -->
+                                <!-- Tab 3 -->
+                                <div class="tab-pane fade" id="t-tab3" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>Мы с Вами определяемся по временным слотам для интервью и проводим второй этап интервью, техническое ревью и принимаем итоговое решение.<br>К концу этого этапа у нас есть:</p>
+                                        <ul>
+                                            <li><i class="lni lni-checkmark-circle"></i> Несколько претендентов на оффер</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Статистика по работе</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/ End Tab 3 -->
+                                <!-- Tab 4 -->
+                                <div class="tab-pane fade" id="t-tab4" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>Завершающий этап. Вы делаете кандидату оффер и у Вас в штате пополнение! Ура! Осталось только:</p>
+                                        <ul>
+                                            <li><i class="lni lni-checkmark-circle"></i> Подписать акт</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Оплатить услугу (после выхода кандидата)</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Адаптировать кандидат в своем коллективе*</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> В течение 60 дней действует гарантия</li>
+                                        </ul>
+                                        <hr>
+                                        *мы также можем помочь с этим вопросом.
+                                    </div>
+                                </div>
+                                <!--/ End Tab 4 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-right wow fadeInRight" data-wow-delay=".4s">
+                        <img src="assets/images/about/about-img-1.jpg" style="border-radius: 2em 0 0 2em" width="120%" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End About Us Area -->
+
+    <!-- Start Intro Video Area -->
+ <!--   <section class="intro-video-area overlay section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title white-text">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">Create your own experience</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Ready to grow faster?</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">There are many variations of passages of Lorem
+                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-video-play">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-12">
+                                <div class="play-thumb wow zoomIn" data-wow-delay=".2s">
+                                    <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
+                                        class="glightbox video"><i class="lni lni-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section> -->
+    <!-- End Intro Video Area -->
+
+    <!-- Start Pricing Table Area -->
+    <section class="pricing-table section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Наше предложение компаниям</h2>
+                        <span class="text-primary wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">тарифы</span>
+                    </div>
+                </div>
+            </div>
+                        <div class="row" style="margin-top: -40px">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".2s" style="border-radius: 2em">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <h4 class="title ms-3" >Месячный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
+                            <div class="price">
+                                <p class="amount">$1500<span class="duration"> / месяц</span></p>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>До 5 кандидатов в месяц</li>
+                            <li>Без предоплаты</li>
+                            <li>Любая сложность</li>
+                            <li>Гибкий подход</li>
+                        </ul>
+                        <!-- End Table List -->
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Месячный">Оставить заявку</a>
+                        </div><br>
+                        <hr>
+                            <div class="price">
+                                <span class="duration"> рекомендуется при постоянном наборе</span>
+                            </div>                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".4s" style="border-radius: 2em">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <h4 class="title ms-3" >Стандартный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
+                            <div class="price">
+                                <p class="amount">от $520<span class="duration"> / вакансию</span></p>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>Быстрый подбор</li>
+                            <li>Предоплата 15%</li>
+                            <li>Зависит от сложности</li>
+                            <li>Строгая схема</li>
+                        </ul>
+                        <!-- End Table List -->
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Стандартный">Оставить заявку</a>
+                        </div><br>
+                        <hr>
+                            <div class="price">
+                                <span class="duration"> рекомендуется при поиске 1 специалиста</span>
+                            </div>   
+                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".6s" style="border-radius: 2em">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <h4 class="title ms-3" >Индивидуальный &nbsp;<sup><a href="price.html#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
+                            <div class="price">
+                                <p class="amount">от $450<span class="duration"> / вакансию</span></p>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>Персональные условия</li>
+                            <li>Предоплата 25%</li>
+                            <li>От 5 вакансий</li>
+                            <li>Гарантийная замена</li>
+                        </ul>
+                        <!-- End Table List -->
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Индивидуальный">Оставить заявку</a>
+                        </div><br>
+                        <hr>
+                            <div class="price">
+                                <span class="duration"> рекомендуется когда срочно нужна команда</span>
+                            </div>   
+                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+            </div>
+    <script>
+    const exampleModal = document.getElementById('exampleModal')
+    exampleModal.addEventListener('show.bs.modal', event => {
+  // Кнопка, которая активировала модальное окно
+  const button = event.relatedTarget
+  // Извлекает информацию из атрибутов data-bs-*
+  const recipient = button.getAttribute('data-bs-whatever')
+  // При необходимости вы можете инициировать запрос AJAX здесь,
+  // а затем выполнить обновление в обратном вызове.
+  //
+  // Обновляет содержимое модального окна.
+  const modalBodyInput = exampleModal.querySelector('.modal-body .select')
+
+  modalBodyInput.value = recipient
+})
+    </script>
+        </div>
+    </section>
+    <!--/ End Pricing Table Area -->
+
+    <section class="section free-version-banner vh-50 d-none">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <div class="section-title mb-60">
+                        <span class="text-white wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">карьера в HR</span>
+                        <h2 class="text-white wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Набираем и обучаем начинающих IT-рекрутеров</h2>
+                        <p class="text-white wow fadeInUp" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Мы обучаем начинающих специалистов на практике, даем им реальные задачи и помогаем развиваться в начале карьерного пути.</p>
+
+                        <div class="button">
+                            <a href="join.html" rel="nofollow" class="btn wow fadeInUp" data-wow-delay=".8s">Присоединиться к нам</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Latest News Area -->
+    <div class="latest-news-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Блог</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".7s">Последние новости и посты</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for menupost in menuposts %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single News -->
+                    <div class="single-news wow fadeInUp" style="border: solid 1px; border-radius: 2em;" data-wow-delay=".6s">
+                        <div class="image" style="height: 220px; border-radius: 2em 2em 0 2em;">
+                            <img class="thumb" src="{{ menupost.image.url }}" height="380px" alt="#">
+                            <div class="meta-details" style="margin-bottom: -20px; margin-right:-30px">
+                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>{{ menupost.blog_date|date:"j M y" }}  &nbsp;</span>
+                            </div>
+                        </div>
+                        <div class="content-body ps-4">
+                            <h4 class="title"><a href="blog.html?postid=3">{{ menupost.title }}</a></h4>
+                        </div>
+                    </div>
+                    <!-- End Single News -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- End Latest News Area -->
+
+    <section class="section free-version-banner-1 vh-50">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <div class="section-title mb-60">
+                        <span class="text-white wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">открытые вакансии</span>
+                        <h2 class="text-white wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Горящие вакансии наших партнеров</h2>
+                            <div class="container">
+                                {% for vacancy in vacancys %}
+                                <a href="vacancy/{{ vacancy.id }}" class="badge my-1 mx-1 h1 wow fadeInUp text-white" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; font-size: 16px; background-color: {{ vacancy.color }};">{{ vacancy.title }}</a>&nbsp;&nbsp;
+                                {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Brand Area -->
+    <div class="brand-area section d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-12">
+                    <div class="section-title align-left wow fadeInLeft" data-wow-delay=".2s">
+                        <span>наши партнеры</span>
+                        <h2>Мы уже работаем с компаниями:</h2>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="brand-logo-wrapper wow fadeInRight" data-wow-delay=".4s">
+                        <ul class="brand-list liststyle d-flex flex-wrap justify-content-center">
+                            <li><a href="#">
+                                    <img src="assets/images/clients/seedilon-logo.svg" height="66px" width="124px" alt="Brand Logo Images">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="assets/images/clients/globalsale-logo.png" height="124px" width="124px" alt="Brand Logo Images">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="assets/images/clients/yoursoft-logo.svg" height="66px" width="124px" alt="Brand Logo Images">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="assets/images/clients/deriv-logo.svg" height="66px" width="124px" alt="Brand Logo Images">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="assets/images/clients/stormnet-logo.webp" height="66px" width="124px" alt="Brand Logo Images">
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Brand Area -->
+
+    {% endblock %}

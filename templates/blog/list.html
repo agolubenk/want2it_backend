@@ -1,0 +1,37 @@
+{% extends 'home.html' %}
+ {% load static %}   <!-- Start Latest News Area -->
+{% block content %}
+    <div class="latest-news-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Блог</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".7s">Последние новости и посты</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-lg-3 col-md-4 col-12 my-1">
+                    <!-- Single News -->
+                    <div class="single-news wow fadeInUp card card-cover my-auto border-0" style="border-radius:2em" data-wow-delay=".2s">
+                        <div class="image" style="height: 210px;">
+                            <img class="thumb" src="{{ post.image.url }}" alt="#">
+                            <div class="meta-details">
+                                &nbsp;<i class="bi bi-calendar-date text-white fa-lg"></i> <span>{{ post.blog_date|date:"j M y" }}</span>
+                            </div>
+                        </div>
+                        <div class="content-body">
+                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" data-bs-target="#blog-modal7">{{ post.title }}</a></h4>
+                        </div>
+                    </div>
+                    <!-- End Single News -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- End Latest News Area -->
+
+{% endblock %}

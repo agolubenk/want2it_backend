@@ -1,0 +1,42 @@
+{% extends 'home.html' %}
+{% load static %}   <!-- Start Latest News Area -->
+{% block content %}
+
+
+   <div class="latest-news-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h3 class="wow fadeInUp pt-2" data-wow-delay=".3s" style="color: {{ vacancy.color }}">{{ vacancy.title }} {{ vacancy.grade }}
+                        </h3>
+                        <br>
+                        <h5 class="wow fadeInUp" data-wow-delay=".7s"><i class="bi bi-currency-exchange fa-lg"></i> от {{ vacancy.salary_from }} до {{ vacancy.salary_to }} <b class="badge bg-dark">USD</b> на руки</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-sm-12 col-md-9 col-lg-8">
+                <!-- Single News -->
+                    <div class="single-news wow fadeInUp card card-cover my-auto border-0" style="border-radius:2em" data-wow-delay=".2s">
+                        <div class="content-body">
+                        {{ vacancy.text|safe }}
+                            <hr>
+                        <b class="text-dark h5">Стек технологий: &nbsp;</b>
+                            {% for stack_splitted in vacancy.stack_splitted %}
+                        <span class="badge" style="background-color: {{ vacancy.color }}; font-size: 15px; margin: 3px">{{ stack_splitted }}</span>
+                            {% endfor %}
+                            <hr>
+                        {{ vacancy.benefits|safe }}
+                        </div>
+                    <!-- End Single News -->
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-4">
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'home.html' %}
+ {% load static %}   <!-- Start Latest News Area -->
+{% block content %}
+       <div class="latest-news-area section container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">{{ post.title }}</h2>
+
+                    </div>
+                </div>
+            </div>
+
+      </div>
+        	<img class="mx-3 mb-3 img-fluid rounded mx-auto d-block img-thumbnail shadow" style="margin-top: -8px;  max-width:96%; max-height: 320px;" src="{{ post.image.url }}">
+          <hr>
+          {{ post.post|safe }}
+          <div class="d-flex justify-content-end">
+              <a class="nav-link linkkk bi bi-link-45deg modal-title text-secondary" style="font-size:21px; margin-left: -15px; margin-top: -12px" data-clipboard-text="https://want2it.online/blog.html?postid=7"></a> &nbsp;{{ post.blog_date|date:"j F Y" }}
+          </div>
+    </div>
+
+{% endblock %}

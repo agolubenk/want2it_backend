@@ -1,0 +1,87 @@
+ {% load static %}   <!-- Start Header Area -->
+    <header class="header">
+        <div class="navbar-area">
+<!--
+            <div class="nav-scroller d-flex justify-content-end mt-3 border-bottom border-secondary border-1">
+    <nav class="nav">
+      <a class="ps-2 pe-2 link-secondary" href="#">Мои резюме</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Отклики</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Вакансии</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Избраное</a>
+      |
+      <a class="ps-2 pe-2 link-secondary" href="#">Профиль</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Уведомления</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Документы</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Настройки</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Рассылка</a>
+      <a class="ps-2 pe-2 link-secondary" href="#">Выход</a>
+    </nav>
+  </div>   -->
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand logo" href="index.html">
+                                <img class="logo1" src="{% static 'images/logo/big-logo.png' %}" alt="Logo" style="margin-top: -10px;" />
+                                &nbsp;Хочу в IT
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item"><a href="index.html">Главная</a></li>
+                                    <li class="nav-item"><a href="#">Компаниям</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="price.html">Кабинет HR</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li class=""><a href="why.html">Почему мы</a></li>
+                                            <li><a href="docs.html">Цены</a></li>
+                                            <li><a href="access/">Документы</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a href="#">Соискаителям</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="vacancy.html">Личный кабинет</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a href="upload.html">Вакансии</a></li>
+                                            <li><a href="invate.html">Составление резюме</a></li>
+                                            <li><a href="vacancy/java-abb/">Документы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="about.html">О нас</a></li>
+                                    <li class="nav-item"><a href="#">Блог</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html" class=" text-truncate">Все статьи</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            {% for menupost in menuposts %}
+                                            <li><a href="blog.html?postid=7" class=" text-truncate">{{ menupost.title }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                </ul>
+                            <div class="button">
+                                <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+                            </div>
+                            </div>
+
+                        </nav>
+                        <!-- navbar -->
+
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+
+            <!-- container -->
+        </div>
+        <!-- navbar area -->
+    </header>
+    <!-- End Header Area -->
+

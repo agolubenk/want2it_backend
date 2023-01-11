@@ -1,0 +1,72 @@
+{% extends 'home.html' %}
+{% load static %}   <!-- Start Latest News Area -->
+{% block content %}
+
+        <div class="latest-news-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title" style="margin-bottom: -15px">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Открытые вакансии</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".7s">Вакансии открытые у наших партнеров</p>
+                    </div>
+                    <ul class="nav justify-content-end " id="pills-tab" style="margin-top: -10px; font-size: 20px">
+                         <li class="nav-item">
+                              <a class="nav-link active"  id="nav-table-tab" data-bs-toggle="tab" data-bs-target="#nav-table" type="button" role="tab" aria-controls="nav-table" aria-selected="true"><i class="bi bi-grid-fill"></i></a>
+                         </li>
+                         <li class="nav-item">
+                             <a class="nav-link" id="nav-list-tab" data-bs-toggle="tab" data-bs-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="false"><i class="bi bi-view-list"></i></a>
+                         </li>
+                    </ul>
+                </div>
+            </div>
+<div class="tab-content mt-3" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="nav-table" role="tabpanel" aria-labelledby="nav-table-tab" tabindex="0">
+            <div class="single-head">
+                <div class="row">
+                    {% for vacancy in vacancys %}
+                    <div class="col-lg-3 col-md-4 col-12 position-relative my-3">
+                        <div class="single-service wow fadeInUp card card-cover my-auto" data-wow-delay=".2s">
+                            <img src="{% static 'images/logo/big-logo.png' %}" class="mb-2 d-none d-sm-block" style="width: 64px">
+                            <div class="row"><div class="col-3 d-block d-sm-none"><img src="{% static 'images/logo/big-logo.png' %}" class="w-100"></div>
+                                <div class="col-9"><strong class="h5"><a href="vacancy/{{ vacancy.id }}" class="text-primary link-light stretched-link">{{ vacancy.title }} {{ vacancy.grade }}</a></strong></div></div>
+                            <hr>
+                            <a href="vacancy/{{ vacancy.id }}" class="text-dark link-dark" style="font-weight: bold">{{ vacancy.salary_from }} - {{ vacancy.salary_to }} <span class="badge bg-dark text-white">{{ vacancy.currency }}</span> </a><br>
+                                <figure class="text-end" style="margin-bottom: -36px;">
+                                  <figcaption class="blockquote-footer text-info">
+                                    <cite>{{ vacancy.vacancy_date }}</cite>
+                                  </figcaption>
+                                </figure>
+                        </div>
+                          <div class="position-absolute top-0 end-0 translate-middle badge bg-info text-dark" style="z-index: 50; font-size: 15px">{{ vacancy.grade }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+  </div>
+    <div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab" tabindex="0">
+            <div class="single-head">
+                <div class="row">
+                    {% for vacancy in vacancys %}
+                    <div class="col-12 position-relative my-3">
+                        <div class="single-service wow fadeInUp card card-cover " data-wow-delay=".2s">
+                            <div class="row">
+                                <div class="col-12" style="margin-bottom: -30px; margin-top: -10px"><strong class="h5 d-flex justify-content-between">
+                                    <div class="d-none d-sm-block"><img src="{% static 'images/logo/big-logo.png' %}" class="mb-2" style="width: 64px;">  <a href="vacancy/{{ vacancy.id }}" class="text-primary link-light stretched-link">{{ vacancy.title }} <br class="d-block d-sm-none"><small class="text-info">{{ vacancy.grade }}</small></a></div>
+                                    <div class="d-block d-sm-none">  <a href="vacancy/{{ vacancy.id }}" class="text-primary link-light stretched-link">{{ vacancy.title }} <br class="d-block d-sm-none"><small class="text-info">{{ vacancy.grade }}</small></a></div>
+                                    <strong class="h6 d-inline-block"><a href="vacancy/{{ vacancy.id }}" class="text-dark link-dark" style="font-weight: bold">{{ vacancy.salary_from }} - {{ vacancy.salary_to }}  <span class="badge bg-dark text-white" style="margin-top:-5px">{{ vacancy.currency }}</span></a></strong></strong></div></div>
+                        </div>
+                          <div class="position-absolute top-0 start-0 translate-middle d-block d-sm-none" style="z-index: 50; font-size: 15px"><img src="{% static 'images/logo/big-logo.png' %}" class="mb-2" style="width: 64px; margin-left: 136px"></div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+</div>
+
+</div>
+            <br>
+        </div><hr>
+
+    </div>
+
+{% endblock %}
