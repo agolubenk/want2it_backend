@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'start.apps.StartConfig',
     'blog.apps.BlogConfig',
     'vacancy.apps.VacancyConfig',
+    'contacts.apps.ContactsConfig',
     'django_summernote',
 ]
 
