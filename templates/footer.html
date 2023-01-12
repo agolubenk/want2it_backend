@@ -23,7 +23,7 @@
                         <div class="single-footer f-link">
                             <h3>Соискателям</h3>
                             <ul>
-                                <li><a href="vacancy.html">Вакансии</a></li>
+                                <li><a href="{% url 'vacancy_list' %}">Вакансии</a></li>
                                 <li><a href="upload.html">Составление резюме</a></li>
                                 <li><a href="invate.html">Документы</a></li>
                                 <li><a href="feedback.html">Личный кабинет</a></li>
@@ -49,9 +49,9 @@
                         <div class="single-footer f-link text-truncate">
                             <h3>Блог</h3>
                             <ul>
-                                <li><a href="blog.html">Все статьи</a></li>
+                                <li><a href="{% url 'blog_list' %}">Все статьи</a></li>
                                             {% for menupost in menuposts %}
-                                            <li><a href="blog.html?postid=7" class="text-truncate" style="margin-top: -2px; margin-bottom: -1px;">{{ menupost.title }}</a></li>
+                                            <li><a href="blog/{{ menupost.id }}" class="text-truncate" style="margin-top: -2px; margin-bottom: -1px;">{{ menupost.title }}</a></li>
                                             {% endfor %}
                             </ul>
                         </div>
