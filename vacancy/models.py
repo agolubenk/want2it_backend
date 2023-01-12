@@ -32,6 +32,7 @@ class Vacancy(models.Model):
     benefits = models.TextField("Предложение и бонусы")
     vacancy_date = models.DateField("Дата публикации", default=timezone.now)
     activity = models.BooleanField('Активность', default=0)
+    hot = models.BooleanField('Продвижение', default=0)
 
 
     def publish(self):
