@@ -14,7 +14,11 @@ class BlogAdmin(SummernoteModelAdmin):
     def preview(self, obj):
         return mark_safe(f'<img src="{obj.image.url}" style="max-height: 28px;">')
 
+
     def previeww(self, obj):
         return mark_safe(f'<img src="{obj.image.url}" style="max-height: 160px;">')
+
+    preview.short_description = "Промо"
+    previeww.short_description = "Промо изображение"
 
 admin.site.register(Blog, BlogAdmin)
