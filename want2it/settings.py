@@ -161,7 +161,6 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Want2IT",
     "site_icon": "images/logo/big-logo.png",
     # Add your own branding here
-    "site_logo": None,
     "welcome_sign": "Приветствую администратор Want2IT",
     # Copyright on the footer
     "copyright": "Хочу в IT",
@@ -172,12 +171,14 @@ JAZZMIN_SETTINGS = {
     # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "Хочу в IT", "url": "want2it.online", "permissions": ["auth.view_user"]},
+        {"name": "Dashboard", "url": "https://want2it.online/admin", "permissions": ["auth.view_user"]},
         # model admin to link to (Permissions checked against model)
         {"model": "vacancy.Vacancy"},
         {"model": "blog.Blog"},
         {"model": "contacts.Contacts"},
         {"model": "auth.User"},
+        {"name": "Перейти на сайт", "url": "https://want2it.online", "permissions": ["auth.view_user"]},
+
     ],
     #############
     # Side Menu #
@@ -194,6 +195,9 @@ JAZZMIN_SETTINGS = {
         "users.User": "fas fa-user",
         "auth.Group": "fas fa-users",
         "admin.LogEntry": "fas fa-file",
+        "vacancy.Vacancy": "fas fa-tasks",
+        "blog.Blog": "fas fa-rss",
+        "contacts.Contacts": "fas fa-address-book",
     },
     # # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
@@ -225,26 +229,26 @@ JAZZMIN_SETTINGS = {
 }
 
 JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": False,
-    "body_small_text": False,
-    "brand_small_text": False,
-    "brand_colour": "navbar-primary",
+    "navbar_small_text": True,
+    "footer_small_text": True,
+    "body_small_text": True,
+    "brand_small_text": True,
+    "brand_colour": "navbar-dark",
     "accent": "accent-primary",
     "navbar": "navbar-dark",
     "no_navbar_border": False,
-    "navbar_fixed": False,
+    "navbar_fixed": True,
     "layout_boxed": False,
     "footer_fixed": False,
-    "sidebar_fixed": False,
-    "sidebar": "sidebar-dark-info",
+    "sidebar_fixed": True,
+    "sidebar": "sidebar-dark-primary",
     "sidebar_nav_small_text": True,
     "sidebar_disable_expand": False,
     "sidebar_nav_child_indent": True,
     "sidebar_nav_compact_style": True,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "darkly",
+    "theme": "flatly",
     "dark_mode_theme": "slate",
     "button_classes": {
         "primary": "btn-primary",
