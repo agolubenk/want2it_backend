@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'start.apps.StartConfig',
     'blog.apps.BlogConfig',
+    'accounting.apps.AccountingConfig',
     'vacancy.apps.VacancyConfig',
     'contacts.apps.ContactConfig',
     'orders.apps.OrderConfig',
@@ -178,6 +179,7 @@ JAZZMIN_SETTINGS = {
         {"model": "blog.Blog"},
         {"model": "contacts.Contact"},
         {"model": "orders.Order"},
+        {"model": "accounting.Price"},
     ],
     #############
     # Side Menu #
@@ -204,6 +206,8 @@ JAZZMIN_SETTINGS = {
         "contacts.Contact": "fas fa-address-book",
         "contacts.Emplouee": "fas fa-id-badge",
         "orders.Order": "fas fa-id-card",
+        "accounting.Tarif": "fas fa-book",
+        "accounting.Price": "fas fa-calculator",
     },
     # # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
