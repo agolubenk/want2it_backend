@@ -3,9 +3,9 @@ from django.contrib import admin
 from .models import Contacts
 
 class ContactsAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'telegram', 'phone', 'email', 'address', 'default_status')
-    search_fields = ['title', 'phone', 'email']
-    filter = ['default_status',]
+    list_display = ('title', 'name', 'telegram', 'phone', 'email', 'address',)
+    search_fields = ['title', 'name', 'telegram', 'phone', 'email']
+    filter = ['title',]
 
 
 

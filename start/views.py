@@ -11,5 +11,5 @@ def menu_list(request):
     """Формирует список статей"""
     menuposts = Blog.objects.filter(draft=1).order_by('-blog_date')[:3]
     vacancys = Vacancy.objects.filter(activity=1).order_by('-vacancy_date')
-    contacts = Contacts.objects.filter(default_status=1)
+    contacts = Contacts.objects.filter(title='Организация')
     return render(request, 'index.html', {'menuposts': menuposts, 'vacancys': vacancys, 'contacts': contacts})
