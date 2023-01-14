@@ -178,13 +178,14 @@ JAZZMIN_SETTINGS = {
         {"model": "blog.Blog"},
         {"model": "contacts.Contact"},
         {"model": "orders.Order"},
-        {"model": "auth.User"},
-        {"name": "Перейти на сайт", "url": "https://want2it.online", "permissions": ["auth.view_user"]},
-
     ],
     #############
     # Side Menu #
     #############
+    "usermenu_links": [
+        {"model": "auth.user"},
+        {"name": "Перейти на сайт", "url": "https://want2it.online", "permissions": ["auth.view_user"]},
+    ],
     # Whether to display the side menu
     "show_sidebar": True,
     # Whether to aut expand the menu
@@ -199,7 +200,9 @@ JAZZMIN_SETTINGS = {
         "admin.LogEntry": "fas fa-file",
         "vacancy.Vacancy": "fas fa-tasks",
         "blog.Blog": "fas fa-rss",
+        "blog.Comment": "fas fa-comments",
         "contacts.Contact": "fas fa-address-book",
+        "contacts.Emplouee": "fas fa-id-badge",
         "orders.Order": "fas fa-id-card",
     },
     # # Icons that are used when one is not manually specified
@@ -213,6 +216,8 @@ JAZZMIN_SETTINGS = {
     #############
     # UI Tweaks #
     #############
+    "hide_apps": ['django_summernote'],
+    "hide_models": ['django_summernote'],
     # Relative paths to custom CSS/JS scripts (must be present in static files)
     # Uncomment this line once you create the bootstrap-dark.css file
     # "custom_css": "css/bootstrap-dark.css",

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Blog
+from .models import Blog, Comment
 from vacancy.models import Vacancy
 from contacts.models import Contact
 from django.utils import timezone

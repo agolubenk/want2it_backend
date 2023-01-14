@@ -19,4 +19,21 @@ class Blog(models.Model):
 
 
 
+class Comment(models.Model):
+    author = models.CharField("Название", max_length=200)
+    email = models.EmailField("E-mail")
+    text = models.TextField("Комментарий",)
+    date = models.DateTimeField("Дата публикации", default=timezone.now)
+    status = models.BooleanField('Статус', default=0)
+
+
+    def publish(self):
+        self.date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return f' "{self.author}"'+f' от {self.date}'
+
+
+
 
