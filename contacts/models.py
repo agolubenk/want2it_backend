@@ -9,16 +9,16 @@ POSITION = (
         ('Организация', 'Организация'),
         ('Техподдержка', 'Техподдержка'),
     )
-class Contacts(models.Model):
+class Contact(models.Model):
     title = models.CharField("Должность", max_length=500, choices=POSITION, default='Рекрутер')
     name = models.CharField("Фамилия Имя", max_length=500, default='Неопознанный member')
-    telegram = models.CharField("Telegram",max_length=200)
+    telegram = models.CharField("Telegram",max_length=200, unique=True)
     facebook = models.URLField("Facebook",max_length=200, default='https://facebook.com/')
     instagram = models.URLField("Instagram",max_length=200, default='https://instagram.com/')
     career = models.URLField("Habr Career",max_length=200, default='https://career.habr.com/')
     twitter = models.URLField("Twitter",max_length=200, default='https://twitter.com/')
     linkedin = models.URLField("LinkedIn",max_length=200, default='https://linkedin.com/in/')
-    phone = models.CharField("Телефон",max_length=200, default='+375')
+    phone = models.CharField("Телефон",max_length=200, default='+375', unique=True)
     email = models.EmailField("Email",max_length=200, unique=True)
     address = models.CharField("Адрес",max_length=200, default='Минск, ')
 

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'start.apps.StartConfig',
     'blog.apps.BlogConfig',
     'vacancy.apps.VacancyConfig',
-    'contacts.apps.ContactsConfig',
+    'contacts.apps.ContactConfig',
+    'orders.apps.OrderConfig',
     'django_summernote',
 ]
 
@@ -175,7 +176,8 @@ JAZZMIN_SETTINGS = {
         # model admin to link to (Permissions checked against model)
         {"model": "vacancy.Vacancy"},
         {"model": "blog.Blog"},
-        {"model": "contacts.Contacts"},
+        {"model": "contacts.Contact"},
+        {"model": "orders.Order"},
         {"model": "auth.User"},
         {"name": "Перейти на сайт", "url": "https://want2it.online", "permissions": ["auth.view_user"]},
 
@@ -197,16 +199,17 @@ JAZZMIN_SETTINGS = {
         "admin.LogEntry": "fas fa-file",
         "vacancy.Vacancy": "fas fa-tasks",
         "blog.Blog": "fas fa-rss",
-        "contacts.Contacts": "fas fa-address-book",
+        "contacts.Contact": "fas fa-address-book",
+        "orders.Order": "fas fa-id-card",
     },
     # # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",
-    "default_icon_children": "fas fa-arrow-right",
+    "default_icon_children": "fas fa-folder",
     #################
     # Related Modal #
     #################
     # Use modals instead of popups
-    "related_modal_active": False,
+    "related_modal_active": True,
     #############
     # UI Tweaks #
     #############

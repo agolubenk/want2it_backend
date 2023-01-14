@@ -1,5 +1,94 @@
 {% extends 'home.html' %}
 {% load static %}
 {% block content %}
+        <!-- Start Service Area -->
+    <section class="services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title align-center">
+                        <h2 class="wow fadeInUp" data-wow-delay=".2s">Оставить заявку</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="single-head">
+                <div class="row">
+                <div class="col-sm-12 col-lg-6 offset-lg-3">
+        <form action="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label class="form-label">Фамилия</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Фамилия" min="2" name="firstNamename" value="" required="">
+            </div>
+
+            <div class="col-sm-6">
+              <label class="form-label">Имя</label>
+              <input type="text" class="form-control" id="lastName" name="lastNamename" min="2" placeholder="Имя" value="" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Telegram</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="telegram" name="telegramname" min="5" placeholder="telegram" required="">
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="emailname" placeholder="you@example.com" required="">
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Компания <span class="text-muted">(Опционально)</span></label>
+              <input type="text" class="form-control" id="comp" name="compname" min="3" placeholder="Моя компания">
+            </div>
+
+            <div class="col-md-5">
+              <label class="form-label">Страна</label>
+              <select class="form-select" id="country" required="">
+                <option value="Беларусь">Беларусь</option>
+                <option value="Россия">Россия</option>
+                <option value="another">другая...</option>
+              </select>
+            </div>
+
+            <div class="col-md-7">
+              <label class="form-label">Телефон</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">+</span>
+                <input type="number" class="form-control" id="phone" name="phonename" placeholder="375001234567" required="">
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Тариф</label>
+              <select class="form-select select" id="state" required="">
+                <option value="Месячный">Месячный</option>
+                <option value="Стандартный">Стандартный</option>
+                <option value="Индивидуальный">Индивидуальный</option>
+              </select>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Напишите свой вопрос</label>
+              <textarea type="text" rows="5" class="form-control" name="zipname" id="zip" required="" min="20" style="height:164px;"></textarea>
+            </div>
+          </div>
+       <div class="form-check form-switch my-4" style="font-size: 16px">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Согласен(-а) на обработку персональных данных &nbsp;<a href="docs.html"><sup class="bi bi-box-arrow-up-right text-primary"></sup></a></label>
+                </div>
+          <hr class="my-4">
+
+            <div class="button">
+                <button class="btn w-100 send-them" name="submit" id="submit2" value="Submit" onsubmit="return sendtelegram()">Отправить</button>
+            </div>
+        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End Services Area -->
 
     {% endblock %}
