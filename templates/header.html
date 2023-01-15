@@ -41,7 +41,7 @@
                                             <li><a href="price.html">Кабинет HR</a></li>
                                             <li><hr class="dropdown-divider"></li>
                                             <li class=""><a href="why.html">Почему мы</a></li>
-                                            <li><a href="docs.html">Цены</a></li>
+                                            <li><a href="{% url 'price' %}">Цены</a></li>
                                             <li><a href="access/">Документы</a></li>
                                         </ul>
                                     </li>
@@ -61,13 +61,13 @@
                                             <li><a href="{% url 'blog_list' %}" class=" text-truncate">Все статьи</a></li>
                                             <li><hr class="dropdown-divider"></li>
                                             {% for menupost in menuposts %}
-                                            <li><a href="blog/{{ menupost.id }}" class=" text-truncate">{{ menupost.title }}</a></li>
+                                            <li><a href="{% url 'blog_detail' pk=menupost.pk %}" class=" text-truncate">{{ menupost.title }}</a></li>
                                             {% endfor %}
                                         </ul>
                                     </li>
                                 </ul>
                             <div class="button">
-                                <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+                                <a class="btn" href="{% url 'order' %}">Оставить заявку</a>
                             </div>
                             </div>
 

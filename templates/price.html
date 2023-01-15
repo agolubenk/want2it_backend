@@ -1,0 +1,221 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+<br>
+    <!-- Start Pricing Table Area -->
+    <section class="pricing-table section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Наше предложение компаниям</h2>
+                        <span class="text-primary wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">тарифы</span>
+                    </div>
+                </div>
+            </div>
+                        <div class="row" style="margin-top: -40px">
+                {% for tarif in tarifs %}
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".2s" style="border-radius: 2em">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <h4 class="title ms-3" >{{ tarif.title }} &nbsp;<sup><a href="price/#price" class="text-info"><i class="bi bi-box-arrow-up-right"></i></a></sup></h4>
+                            <div class="price">
+                                <p class="amount">от {{ tarif.currency }}{{ tarif.minimal_price }}<span class="duration"> / {{ tarif.unit }}</span></p>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li>{{ tarif.param_1 }}</li>
+                            <li>{{ tarif.param_2 }}</li>
+                            <li>{{ tarif.param_3 }}</li>
+                            <li>{{ tarif.param_4 }}</li>
+                        </ul>
+                        <!-- End Table List -->
+                        <!-- Table Bottom -->
+                        <div class="button">
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Месячный">Оставить заявку</a>
+                        </div><br>
+                        <hr>
+                            <div class="price">
+                                <span class="duration">{{ tarif.description }}</span>
+                            </div>                        <!-- End Table Bottom -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--/ End Pricing Table Area -->
+
+    <!-- Start About Us Area -->
+    <section class="about-us section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="about-left">
+                        <div class="about-tab wow fadeInUp row" data-wow-delay=".4s">
+                            <!-- Nav Tab  -->
+                                <div class="col-md-6 col-lg-6 col-12 mt-2"><b class="text-primary">
+                                    {% for tarif in tarifs %}
+                                        {% if tarif.unit == "месяц" %}
+                                    {{ tarif.title }} - {{ tarif.currency }}{{ tarif.minimal_price }} в месяц<br>
+                                        {% endif %}
+                                        {% if tarif.unit == "год" %}
+                                    {{ tarif.title }} - {{ tarif.currency }}{{ tarif.minimal_price }} в год<br>
+                                        {% endif %}
+                                {% endfor %}
+                                </b></div>
+                                <div class="col-md-6 col-lg-6 col-12 d-flex flex-row-reverse my-2">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                 {% for tarif in tarifs %}
+                                        {% if tarif.unit == "вакансию" %}
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-{{ tarif.id }}"
+                                        role="tab">{{ tarif.title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                            </div>
+                            <!--/ End Nav Tab -->
+                            <div class="tab-content" id="myTabContent">
+                                  {% for tarif in tarifs %}
+                                        {% if tarif.unit == "вакансию" %}
+                                <div class="tab-pane fade" id="t-{{ tarif.id }}" role="tabpanel">
+                                    <div class="tab-content">
+      <div class="table-responsive text-center" style="white-space: nowrap;">
+        <table class="table table-hover" >
+          <thead>
+            <tr>
+              <th class="text-start">Специализация</th>
+              <th>Junior</th>
+              <th>Middle</th>
+              <th>Senior</th>
+              <th>Lead</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="Ruby, PHP, Java, JavaScript, C#/.NET, TypeScript, Rust, Solidity, Python, Go, C/C++, Android, iOS, Unity, SQL, Swift и другие">
+              <td class="text-start">Разработчики</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $180">от $180</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $780">от $780</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1180">от $1180</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1840">от $1840</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="System administrator, DBA, Network engineer">
+              <td class="text-start">Администраторы (DBA, System)</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $160">от $160</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $760">от $560</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1040">от $1040</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1480">от $1480</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="Business analyst, System analyst, Product manager/owner, Project manager">
+              <td class="text-start">Аналитики, Project- / Product- менеджеры</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $290">от $240</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $680">от $680</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1120">от $1120</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1720">от $1720</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="BI analyst, Data analyst, Data scientist, ETL developer, ML инженер">
+              <td class="text-start">ML инженеры, аналитики</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $290">от $290</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $920">от $920</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1540">от $1540</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $2010">от $2010</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="Дизайнеры, Верстальщики, UI/UX, Game designer">
+              <td class="text-start">Дизайнеры, UI/UX</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $190">от $120</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $640">от $640</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1090">от $1090</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1440">от $1440</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="DevOps, SecOps, TestOps, GitOps, System engineer">
+              <td class="text-start">Системные инженеры, *Ops инженеры</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $240">от $200</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $750">от $750</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1240">от $1240</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1980">от $1980</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="Solution architect, Enterprise architect, System architect, Software architect, DB architect">
+              <td class="text-start">Архитекторы</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior - "> - </td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle - "> - </td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1680">от $1680</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $2150">от $2150</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="QA manual, QA web, AQA, специалист по тестированию">
+              <td class="text-start">Тестировщики, QA</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $120">от $120</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $670">от $670</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $980">от $980</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1240">от $1240</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="SMM, SEO, internet-marketing">
+              <td class="text-start">Digital, маркетологи</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $100">от $100</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $350">от $350</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $500">от $500</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $880">от $880</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="Продажи, поддержка, партнерские связи, лицо компании">
+              <td class="text-start">Менеджер по развитию бизнеса</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $140">от $140</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $720">от $720</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $1160">от $1160</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1480">от $1480</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="HRD, HRM, HRBP, рекрутеры, сорсеры, делопроизводители">
+              <td class="text-start">HR-менеджеры, рекрутеры</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior $130">от $130</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle $690">от $690</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior $980">от $980</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead $1310">от $1310</td>
+            </tr>
+            <tr data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="bottom" title="Прочие специальности, не указанные в таблице">
+              <td class="text-start">Прочие специальности</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="junior - 5.0% от годовой ЗП">5.0% ЗП(год)</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="middle - 4.0% от годовой ЗП">4.0% ЗП(год)</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="senior - 3.5% от годовой ЗП">3.5% ЗП(год)</td>
+              <td data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip-p" data-bs-placement="top" title="lead - 3.0% от годовой ЗП">3.0% ЗП(год)</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+                                    </div>
+                                </div>
+                                    {% endif %}
+                                {% endfor %}
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /End About Us Area -->
+
+
+    <section class="section free-version-banner-1">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <div class="section-title mb-60">
+                        <span class="text-white wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">открытые вакансии</span>
+                        <h2 class="text-primary wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Горящие вакансии наших партнеров</h2>
+                            <div class="container">
+                                {% for vacancy in vacancys %}
+                                <a href="vacancy/{{ vacancy.id }}" class="badge my-1 mx-1 h1 wow fadeInUp text-white" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp; font-size: 16px; background-color: {{ vacancy.color }};">{{ vacancy.title }}</a>&nbsp;&nbsp;
+                                {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

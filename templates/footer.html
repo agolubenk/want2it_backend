@@ -10,7 +10,7 @@
                         <div class="single-footer f-link">
                             <h3>Компаниям</h3>
                             <ul>
-                                <li><a href="price.html">Цены</a></li>
+                                <li><a href="{% url 'price' %}">Цены</a></li>
                                 <li><a href="why.html">Почему мы</a></li>
                                 <li><a href="docs.html">Документы</a></li>
                                 <li><a href="access/">Кабинет HR</a></li>
@@ -51,7 +51,7 @@
                             <ul>
                                 <li><a href="{% url 'blog_list' %}">Все статьи</a></li>
                                             {% for menupost in menuposts %}
-                                            <li><a href="blog/{{ menupost.id }}" class="text-truncate" style="margin-top: -2px; margin-bottom: -1px;">{{ menupost.title }}</a></li>
+                                            <li><a href="{% url 'blog_detail' pk=menupost.pk %}" class="text-truncate" style="margin-top: -2px; margin-bottom: -1px;">{{ menupost.title }}</a></li>
                                             {% endfor %}
                             </ul>
                         </div>
@@ -62,12 +62,12 @@
                         <!-- Single Widget -->
                         <div class="f-about single-footer text-center">
                             <div class="logo">
-                                <a href="index.html" class="text-center"><img src="{% static 'images/logo/big-logo.png' %}" alt="Logo" style="width: 56%"></a>
+                                <a href="{% url 'menu_list' %}" class="text-center"><img src="{% static 'images/logo/big-logo.png' %}" alt="Logo" style="width: 56%"></a>
                             </div>
                             <span class="text-center"><big>Рекрутинговое агентство <strong>"Хочу в IT"</strong> </big></span>
                             <div class="footer-social">
                                         <div class="button w-100">
-            <a class="btn w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить заявку</a>
+            <a class="btn w-100" href="{% url 'order' %}">Оставить заявку</a>
         </div>
                             </div>
                         </div>
@@ -82,11 +82,11 @@
             <div class="d-flex flex-column flex-md-row justify-content-between mx-auto py-2 mt-2 border-top border-secondary">
 <ul class="d-flex justify-content-center order-md-last social-icons my-auto mx-5" style="margin-top: -12px">
     {% for contact in contacts %}
-              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><a class="twitter" href="{{ contact.twitter }}"><i class="fa fa-twitter fa-lg"></i></a></li>
-              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"><a class="telegram" href="{{ contact.telegram }}"><i class="fa fa-telegram fa-lg"></i></a></li>
-              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin"><a class="linkedin" href="{{ contact.linkedin }}"><i class="fa fa-linkedin fa-lg"></i></a></li>
-              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><a class="facebook" href="{{ contact.facebook }}"><i class="fa fa-facebook fa-lg"></i></a></li>
-              <li  data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><a class="instagram" href="{{ contact.instagram }}"><i class="fa fa-instagram fa-lg"></i></a></li>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter"><a class="twitter" href="{{ contact.twitter }}"><i class="fa fa-twitter fa-lg"></i></a></li>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram"><a class="telegram" href="{{ contact.telegram }}"><i class="fa fa-telegram fa-lg"></i></a></li>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin"><a class="linkedin" href="{{ contact.linkedin }}"><i class="fa fa-linkedin fa-lg"></i></a></li>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook"><a class="facebook" href="{{ contact.facebook }}"><i class="fa fa-facebook fa-lg"></i></a></li>
+              <li data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram"><a class="instagram" href="{{ contact.instagram }}"><i class="fa fa-instagram fa-lg"></i></a></li>
     {% endfor %}
 </ul>
       <p class="my-auto mx-5 text-center">&copy; 2022 <span class="lang-49" data-label="LLC 'Want 2 IT'">ООО "Хочу Вайти"</span> <small style="opacity: 0.5">УНП192847179</small></p>

@@ -35,12 +35,12 @@
                     <div class="single-news wow fadeInUp card card-cover my-auto border-0" style="border-radius:2em" data-wow-delay=".2s">
                         <div class="image" style="height: 210px;">
                             <img class="thumb" src="{% static 'images/logo/big-logo.png' %}" alt="#">
-                            <div class="meta-details" style="background-color: orangered; border: solid 2px #242424">
+                            <div class="meta-details" style="background-color: {{ vacancy.color }}; border: solid 2px #242424">
                                 &nbsp;<i class="bi bi-fire text-white fa-lg"></i> <span>hot</span>
                             </div>
                         </div>
                         <div class="content-body">
-                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" href="/vacancy/{{ vacancy.id }}">{{ vacancy.title }}</a></h4>
+                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" href="/vacancy/{{ vacancy.id }}">{{ vacancy.grade }} {{ vacancy.title }}</a></h4>
                         </div>
                     </div>
                     <!-- End Single News -->

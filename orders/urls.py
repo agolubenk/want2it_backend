@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('order/', views.order, name='order'),
+    path('щквук/', views.order, name='order'),
+    path('заявка/', views.order, name='order'),
 ]
 
 if settings.DEBUG:
