@@ -2,6 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
+import accounting.models
+
 PARAMETRS = (
         ('Разработчики', 'Разработчики'),
         ('Администраторы (DBA, System)', 'Администраторы (DBA, System)'),
