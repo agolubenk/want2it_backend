@@ -29,7 +29,7 @@
                         <div class="single-service wow fadeInUp card card-cover my-auto" data-wow-delay=".2s">
                             <img src="{% static 'images/logo/big-logo.png' %}" class="mb-2 d-none d-sm-block" style="width: 64px">
                             <div class="row"><div class="col-3 d-block d-sm-none"><img src="{% static 'images/logo/big-logo.png' %}" class="w-100"></div>
-                                <div class="col-9"><strong class="h5"><a href="vacancy/{{ vacancy.id }}" class="text-primary link-light stretched-link">{{ vacancy.title }}</a></strong></div></div>
+                                <div class="col-9"><strong class="h5"><a href="{% url 'vacancy_detail' pk=vacancy.pk %}" class="text-primary link-light stretched-link">{{ vacancy.title }}</a></strong></div></div>
                             <hr>
                             <a href="vacancy/{{ vacancy.id }}" class="text-dark link-dark" style="font-weight: bold">{{ vacancy.salary_from }} - {{ vacancy.salary_to }} <span class="badge bg-dark text-white">{{ vacancy.currency }}</span> </a><br>
                                 <figure class="text-end" style="margin-bottom: -36px;">
@@ -52,9 +52,9 @@
                         <div class="single-service wow fadeInUp card card-cover " data-wow-delay=".2s">
                             <div class="row">
                                 <div class="col-12" style="margin-bottom: -30px; margin-top: -10px"><strong class="h5 d-flex justify-content-between">
-                                    <div class="d-none d-sm-block"><img src="{% static 'images/logo/big-logo.png' %}" class="mb-2" style="width: 64px;">  <a href="vacancy/{{ vacancy.id }}" class="text-primary link-light stretched-link">{{ vacancy.title }} <br class="d-block d-sm-none"><small style="color: {{ vacancy.color }}">{{ vacancy.grade }}</small></a></div>
-                                    <div class="d-block d-sm-none">  <a href="vacancy/{{ vacancy.id }}" class="text-primary link-light stretched-link">{{ vacancy.title }} <br class="d-block d-sm-none"><small class="{{ vacancy.color }}">{{ vacancy.grade }}</small></a></div>
-                                    <strong class="h6 d-inline-block"><a href="vacancy/{{ vacancy.id }}" class="text-dark link-dark" style="font-weight: bold">{{ vacancy.salary_from }} - {{ vacancy.salary_to }}  <span class="badge bg-dark text-white" style="margin-top:-5px">{{ vacancy.currency }}</span></a></strong></strong></div></div>
+                                    <div class="d-none d-sm-block"><img src="{% static 'images/logo/big-logo.png' %}" class="mb-2" style="width: 64px;">  <a href="{% url 'vacancy_detail' pk=vacancy.pk %}" class="text-primary link-light stretched-link">{{ vacancy.title }} <br class="d-block d-sm-none"><small style="color: {{ vacancy.color }}">{{ vacancy.grade }}</small></a></div>
+                                    <div class="d-block d-sm-none">  <a href="{% url 'vacancy_detail' pk=vacancy.pk %}" class="text-primary link-light stretched-link">{{ vacancy.title }} <br class="d-block d-sm-none"><small class="{{ vacancy.color }}">{{ vacancy.grade }}</small></a></div>
+                                    <strong class="h6 d-inline-block"><a href="{% url 'vacancy_detail' pk=vacancy.pk %}" class="text-dark link-dark" style="font-weight: bold">{{ vacancy.salary_from }} - {{ vacancy.salary_to }}  <span class="badge bg-dark text-white" style="margin-top:-5px">{{ vacancy.currency }}</span></a></strong></strong></div></div>
                         </div>
                           <div class="position-absolute top-0 start-0 translate-middle d-block d-sm-none" style="z-index: 50; font-size: 15px"><img src="{% static 'images/logo/big-logo.png' %}" class="mb-2" style="width: 64px; margin-left: 136px"></div>
                     </div>

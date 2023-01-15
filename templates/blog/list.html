@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="content-body">
-                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" href="/vacancy/{{ vacancy.id }}">{{ vacancy.grade }} {{ vacancy.title }}</a></h4>
+                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" href="{% url 'vacancy_detail' pk=vacancy.pk %}">{{ vacancy.grade }} {{ vacancy.title }}</a></h4>
                         </div>
                     </div>
                     <!-- End Single News -->
