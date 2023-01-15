@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'contacts.apps.ContactConfig',
     'orders.apps.OrderConfig',
     'django_summernote',
+    'crispy_forms',
     'import_export',
 ]
 
@@ -157,6 +158,7 @@ SUMMERNOTE_CONFIG = {
     },
 }
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 JAZZMIN_SETTINGS = {
     "site_title": "want2it.online",

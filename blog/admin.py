@@ -3,6 +3,8 @@ from django.utils.safestring import mark_safe
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Blog, Comment
 
+
+@admin.register(Comment)
 class CommentAdmin(SummernoteModelAdmin):
     fields = ['author', 'email', 'text', 'date', 'status']
     summernote_fields = ('text',)
@@ -10,6 +12,8 @@ class CommentAdmin(SummernoteModelAdmin):
     list_filter = ('status',)
 
     readonly_fields = ["email", "date"]
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)
 
 class BlogAdmin(SummernoteModelAdmin):
     fields = ['title', 'post', 'previeww', 'image', 'blog_date', 'draft']
@@ -30,4 +34,3 @@ class BlogAdmin(SummernoteModelAdmin):
     previeww.short_description = "Промо изображение"
 
 admin.site.register(Blog, BlogAdmin)
-admin.site.register(Comment, CommentAdmin)
