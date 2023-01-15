@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'contacts.apps.ContactConfig',
     'orders.apps.OrderConfig',
     'django_summernote',
+    'import_export',
 ]
 
 MIDDLEWARE = [
