@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'want2it.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'eaqlrqlz',
-        'HOST': 'postgres://eaqlrqlz:IscDTb5dw8oArqFM38gDggY_9D5bmwKD@mel.db.elephantsql.com/eaqlrqlz',
+        'NAME': 'postgres',
+        'HOST': 'localhost',
         'PORT': '5432',
-        'USER': 'eaqlrqlz',
-        'PASSWORD': 'IscDTb5dw8oArqFM38gDggY_9D5bmwKD',
+        'USER': 'postgres',
+        'PASSWORD': '2798',
     }
 }
 
