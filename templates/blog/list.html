@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="content-body">
-                            <h4 class="title"><a class="stretched-link nav-link mt-auto" data-bs-toggle="modal" data-bs-target="#blog-modal7">{{ post.title }}</a></h4>
+                            <h4 class="title"><a class="stretched-link nav-link mt-auto" href="{% url 'blog_detail' pk=post.pk %}">{{ post.title }}</a></h4>
                         </div>
                     </div>
                     <!-- End Single News -->

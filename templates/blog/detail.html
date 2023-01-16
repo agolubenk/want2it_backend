@@ -1,5 +1,4 @@
 {% extends 'home.html' %}
-{% load crispy_forms_tags %}
 {% load static %}   <!-- Start Latest News Area -->
 {% block content %}
 
@@ -68,10 +67,10 @@
                 {% for comment in comments %}
         <div class="comments" style="padding: 10px;">
         <figure class="text-end">
-  <i class="blockquote text-start">
+  <i class="blockquote text-end" style="font-size: 13px">
 {{ comment.text | linebreaks }}
-  </i>
-  <figcaption class="blockquote-footer" style="font-size: 14px">
+  </i><br>
+  <figcaption class="blockquote-footer" style="font-size: 11px">
     {{ comment.author }} <cite title="Source Title">({{ comment.date|date:"b y" }})</cite>
   </figcaption>
 </figure>
@@ -91,8 +90,12 @@
     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
 <form method="post" style="margin-top: 1.3em;">
-          {{ comment_form }}
           {% csrf_token %}
+    <div class="row">
+        <div class="col-sm-12 col-md-5"><span class="my-1 w-100">{{ comment_form.author }}</span></div>
+        <div class="col-sm-12 col-md-7"><span class="my-1 w-100">{{ comment_form.email }}</span></div>
+    </div>
+              <span class="my-1 w-100">{{ comment_form.text }}</span>
     <div class="button w-100 mt-3">
           <button type="submit" class="btn w-100">Отправить</button>
     </div>

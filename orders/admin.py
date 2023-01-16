@@ -4,7 +4,8 @@ from django_summernote.admin import SummernoteModelAdmin
 from .models import Order
 
 class OrderAdmin(SummernoteModelAdmin):
-    fields = ['name', 'surname', 'status', 'last_date', 'telegram', 'email', 'company', 'country', 'phone', 'text', 'order_date']
+    fields = [('name', 'surname',), ('last_date', 'status',), ('country', 'company',), ('phone', 'telegram',), 'email', 'text', 'conformation', 'order_date']
     list_display = ('email', 'telegram', 'phone', 'company', 'country', 'status', 'last_date', 'order_date',)
 
+    readonly_fields = ('order_date', 'conformation',)
 admin.site.register(Order, OrderAdmin)
