@@ -18,10 +18,22 @@ def order(request):
         fb = OrderForms(request.POST)
         if fb.is_valid():
             subject = "Ваше сообщение доставлено"
+            recipients = fb.cleaned_data['email']
+            body = {
+                'name': "Уважаемый(-ая) "+ fb.cleaned_data['name'] + " " + fb.cleaned_data['surname']+ "!\nВаше сообщение:\n'''" + fb.cleaned_data['text'] + "''' получено и будет обработано в самое ближайшее время.\n\n\nБлагодарим, что обратились к нашей команде!",
+            }
+            message = "\n".join(
+                body.values()) + "\n\n___\nКадровое агенство 'Want 2 IT'\n+375255485756\nwant2it@outlook.com\nООО 'Хочу Вайти'"
+            try:
+                send_mail(subject, message, 'a.golubenko@outlook.com', [recipients])
+            except BadHeaderError:
+                return HttpResponse('Найден некорректный заголовок')
+
+            subject = "Новый заказ"
             body = {
                 'name': fb.cleaned_data['name'],
                 'surname': fb.cleaned_data['surname'],
-                'phone': "Телефон: " + fb.cleaned_data['phone'],
+                'phone': "Телефон: +" + fb.cleaned_data['phone'],
                 'telegram': "Телеграм: https://t.me/" + fb.cleaned_data['telegram'],
                 'email': "E-mail: " + fb.cleaned_data['email'],
                 'country': "Страна " + fb.cleaned_data['country'],
@@ -29,9 +41,9 @@ def order(request):
                 'text': "Сообщение: " + fb.cleaned_data['text'],
             }
             message = "\n".join(
-                body.values()) + "\n\n___\nКадровое агенство 'LeoMi.by'\n+375255485756\nleomiby@gmail.com\nООО 'Хочу Вайти'"
+                body.values()) + "\n\n___\nBot Want2IT\nwant2it@outlook.com"
             try:
-                send_mail(subject, message, 'a.golubenko@outlook.com',['want2it@outlook.com'])
+                send_mail(subject, message, 'a.golubenko@outlook.com', ['want2it@outlook.com'])
             except BadHeaderError:
                 return HttpResponse('Найден некорректный заголовок')
             feed = fb.save(commit=False)
