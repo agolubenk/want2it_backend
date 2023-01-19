@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import urllib.parse as up
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-dkhti59w#lbejz(a52yift$v)q)9^)rq8xi(=80+mk(nfqk%$n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -96,6 +97,16 @@ DATABASES = {
     }
 }
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': '',
+#        'HOST': 'postgres://eaqlrqlz:IscDTb5dw8oArqFM38gDggY_9D5bmwKD@mel.db.elephantsql.com/eaqlrqlz',
+#        'PORT': '5432',
+#        'USER': '',
+#        'PASSWORD': 'IscDTb5dw8oArqFM38gDggY_9D5bmwKD',
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

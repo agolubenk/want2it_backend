@@ -201,7 +201,7 @@
         </div>
     </section> -->
     <!-- End Intro Video Area -->
-
+{% if tarifs %}
     <!-- Start Pricing Table Area -->
     <section class="pricing-table section">
         <div class="container">
@@ -250,7 +250,7 @@
         </div>
     </section>
     <!--/ End Pricing Table Area -->
-
+{% endif %}
     <section class="section free-version-banner vh-50 d-none">
         <div class="container">
             <div class="row align-items-center">
@@ -268,6 +268,7 @@
             </div>
         </div>
     </section>
+{% if menuposts %}
 
     <!-- Start Latest News Area -->
     <div class="latest-news-area section">
@@ -302,7 +303,8 @@
         </div>
     </div>
     <!-- End Latest News Area -->
-
+{% endif %}
+    {% if vacancys %}
     <section class="section free-version-banner-1 vh-50">
         <div class="container py-3">
             <div class="row align-items-center">
@@ -320,7 +322,7 @@
             </div>
         </div>
     </section>
-
+{% endif %}
     <!-- Start Brand Area -->
     <div class="brand-area section d-none">
         <div class="container">
