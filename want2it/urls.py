@@ -12,6 +12,7 @@ urlpatterns = [
     path('', include('vacancy.urls')),
     path('', include('orders.urls')),
     path('', include('accounting.urls')),
+    path('', include('resume.urls')),
     path('summernote/', include('django_summernote.urls')),
 
 ]

@@ -1,0 +1,197 @@
+{% extends 'home.html' %}
+ {% load static %}   <!-- Start Latest News Area -->
+{% block content %}
+    <!-- Start Latest News Area -->
+    <div class="latest-news-area section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".3s">Приглашаем в нашу команду</h2>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Start About Us Area -->
+    <section class="about-us section" style="margin-top: -28px; border-radius: 2em;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="about-left  mx-3" style="margin-top: -32px;">
+                        <div class="about-tab wow fadeInUp" data-wow-delay=".4s">
+                            <!-- Nav Tab  -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-left: -12px; margin-right: -40px;">
+                                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#t-tab1"
+                                        role="tab" style="margin-left:-2px; margin-right:-2px; font-size: 11px;">Интервью</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab2"
+                                        role="tab" style="margin-left:-2px; margin-right:-2px; font-size: 11px;">Практика</a></li>
+                                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#t-tab3"
+                                        role="tab" style="margin-left:-2px; margin-right:-2px; font-size: 11px;">Работа</a></li>
+                            </ul>
+                            <!--/ End Nav Tab -->
+                            <div class="tab-content" id="myTabContent">
+                                <!-- Tab 1 -->
+                                <div class="tab-pane fade show active" id="t-tab1" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>Первым делом мы смотрим, какой у Вас потенциал, последние достижения и результаты, знакомимся с резюме и определяемся с временем интервью. Дальше все четко по пунктам:</p>
+                                        <ul>
+                                            <li><i class="lni lni-checkmark-circle"></i> Само интервью (<strong class="text-success">online</strong>)</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Небольшое тестовое задание</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Оценка уровня погружения в IT</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Оффер или фидбек</li>
+                                        </ul>
+                                        <br>
+                                        <p>Если у Вас на руках оффер, то супер, можем двигаться дальше! Если нет, то не отчаивайтесь. Лучше обратить внимание на минусы и устранить их к следующему интервью!</p>
+                                    </div>
+                                </div>
+                                <!--/ End Tab 1 -->
+                                <!-- Tab 2 -->
+                                <div class="tab-pane fade" id="t-tab2" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>Отлично! Вы получили и приняли оффер! Теперь приступаем к изучению материалов, знакомству с нашей системой и принципами работы. На этом этапе будет сложнее всего, ведь информации много, а времени всего месяц. Есть, конечно, курсы, где все изучают в течение 3-х дней, но, как показывает практика, толку от таких занятий нет, да и больше половины информации забывается в первые дни после экзамена.</p>
+                                        <p>После изучения теоретических материалов наступает время практики. В ходе работы уже непосредственно над отдельно взятой вакансией ты будешь расти в скорости, внимательности и в плане знаний. Ты пройдешь этапы от сорсера, до полноценного IT-рекрутера, и, после сдачи итогового теста сможешь взять свою первую вакансию.</p>
+                                            <!-- Поздравляю, ты в нашей команде. Наступает ответственный момент, которого всего боятся - испытательный срок. Ты боишься подступиться к вакансии, не знаешь - где и как искать кандидатов. Отметай все эти сомнения прочь! Все у тебя получится. На этом периоде за тобой будет закреплён ментор, который даст ответ на любой вопрос, поддержит, даст печеньку и попросит улыбнуться. Также у нас в наличие огромная база знаний, которая подскажет тебе, как поступить в разных ситуациях. Это время пролетит незаметно и продуктивно для тебя. Мы верим в твой успех  -->
+                                    </div>
+                                </div>
+                                <!--/ End Tab 2 -->
+                                <!-- Tab 3 -->
+                                <div class="tab-pane fade" id="t-tab3" role="tabpanel">
+                                    <div class="tab-content">
+                                        <p>После успешного прохождения стажировки (она же и испытательный срок) ты сможешь приступить к работе полноценного рекрутера и получать полноценный доход с закрытых вакансий. Условия и суммы будут зависеть только от твоей продуктивности во время стажировки и пройденного ранее собеседования. Вот перечень того, чем ты будешь зарабатывать деньги:</p>
+                                        <ul>
+                                            <li><i class="lni lni-checkmark-circle"></i> Несколько претендентов на оффер</li>
+                                            <li><i class="lni lni-checkmark-circle"></i> Статистика по работе</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--/ End Tab 3 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="about-right wow fadeInRight" data-wow-delay=".4s">
+                        <img src="{% static 'images/blog/join-img.jpg' %}" width="120%" class="border border-1" style="border-color: #9187a4; border-radius: 2em" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /End About Us Area -->
+
+
+        </div>
+    </div>
+
+    <!-- Start Pricing Table Area -->
+    <section class="pricing-table section" style="margin-top: -20px;">
+        <div class="container">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Что мы даем</h2>
+                        <span class="text-primary wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">наши преимущества</span>
+                    </div>
+            <div class="row" style="margin-top: -30px">
+                <div class="col-lg-1 col-12"></div>
+                <div class="col-lg-4 col-md-6 col-12 mb-2">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".2s" style="border-radius: 2em">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="price">
+                                <p class="amount" style="margin-top:-21px">Компетенции</p>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li> Погружение в сферу IT</li>
+                            <li> Аналитический склад ума </li>
+                            <li> Высокоорганизованный стиль работы</li>
+                            <li> Разноплановые вакансии </li>
+                        </ul>
+                        <!-- End Table List -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 offset-lg-2 mb-2">
+                    <!-- Single Table -->
+                    <div class="single-table wow fadeInUp" data-wow-delay=".4s" style="border-radius: 2em">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="price">
+                                <p class="amount" style="margin-top:-21px">Материальное</p>
+                            </div>
+                        </div>
+                        <!-- End Table Head -->
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li> Высокий % процент от стоимости вакансии </li>
+                            <li> Премия за KPI </li>
+                            <li> Годовой бонус</li>
+                            <li> Повышение оклада</li>
+                        </ul>
+                        <!-- End Table List -->
+                    </div>
+                    <!-- End Single Table-->
+                </div>
+                <div class="col-lg-1 col-12"></div>
+            </div>
+        </div>
+    </section>
+    <!--/ End Pricing Table Area -->
+
+
+        <!-- Start Intro Video Area -->
+    <section class="intro-video-area overlay section vh-100">
+        <div class="container">
+            <div class="row my-5 pt-5">
+                <div class="col-12">
+                    <div class="section-title white-text">
+                        <span class="wow fadeInDown" data-wow-delay=".2s">получи свой опыт в HR</span>
+                        <h2 class="wow fadeInUp" data-wow-delay=".4s">Не знаете что Вас ждет?</h2>
+                        <p class="wow fadeInUp" data-wow-delay=".6s">Это короткое видео покажет, что Вас ждет и что Вы можете получить, работая у нас!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-lg-12">
+                    <div class="intro-video-play">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 col-12">
+                                <div class="play-thumb wow zoomIn" data-wow-delay=".2s">
+                                    <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
+                                        class="glightbox video"><i class="lni lni-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Intro Video Area -->
+
+
+
+    <section class="section free-version-banner-2 vh-50">
+        <div class="container">
+                    <div class="section-title">
+                        <span class="text-dark wow fadeInDown" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">отправить резюме</span>
+                        <h2 class="text-primary wow fadeInUp" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Попробовать себя</h2>
+                    </div>
+            <div class="row align-items-center container my-2">
+                                <div class="col-12 text-center">
+                                    <div class="container" style="max-width: 640px">
+                                    <div class="input-group has-validation">
+                                            <input type="file" class="form-control  form-control-lg" style="border-radius:2em; margin-left: 10px;" placeholder="Имя пользователя получателя" aria-label="Имя пользователя получателя" aria-describedby="button-addon2">
+                                            <button class="btn btn-primary btn-lg" type="button" style="border-radius:2em; margin-left: -60px;" id="button-addon2">Отправить</button>
+                                        <div class="invalid-feedback">
+                                            Your username is required.
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

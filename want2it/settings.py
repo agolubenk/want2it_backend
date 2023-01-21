@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dkhti59w#lbejz(a52yift$v)q)9^)rq8xi(=80+mk(nfqk%$n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'vacancy.apps.VacancyConfig',
     'contacts.apps.ContactConfig',
     'orders.apps.OrderConfig',
+    'resume.apps.ResumeConfig',
     'django_summernote',
     'crispy_forms',
     'import_export',
